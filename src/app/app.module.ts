@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { LocationSearchComponent } from './location-search/location-search.component';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
 import { UserCacheListComponent } from './user-cache-list/user-cache-list.component';
+import { CacheDetailComponent } from './cache-detail/cache-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
     AppComponent,
     LocationSearchComponent,
     GeocacheListComponent,
-    UserCacheListComponent
+    UserCacheListComponent,
+    CacheDetailComponent
   ],
   imports: [
     BrowserModule,

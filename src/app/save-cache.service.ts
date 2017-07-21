@@ -12,5 +12,15 @@ export class SaveCacheService {
   addCache(newCache: Cache) {
     this.caches.push(newCache);
   }
+  getCaches() {
+    return this.caches;
+  }
+  deleteCache(selectedCache) {
+    let foundCache = this.getCacheById(selectedCache.$key);
+    foundCache.remove();
+  }
+  getCacheById(cacheId: string) {
+    return this.af.object('caches/' + cacheId);
+  }
 
 }
