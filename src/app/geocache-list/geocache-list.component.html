@@ -1,2 +1,6 @@
-<h2>Geocache Location:</h2>
-<p>{{childLocations.results[0].formatted_address}}</p>
+<h2>Save New Geocache</h2>
+<label>Enter your name:</label>
+<input #creator>
+<p>Street Address: {{childLocations.results[0].formatted_address}}</p>
+<p>Coordinates: Latitude - {{childLocations.results[0].geometry.location.lat}}, Longitude - {{childLocations.results[0].geometry.location.lng}}</p>
+<button (click)="saveCache(creator.value, childLocations.results[0].formatted_address, childLocations.results[0].geometry.location.lat, childLocations.results[0].geometry.location.lng)">Save Cache</button>

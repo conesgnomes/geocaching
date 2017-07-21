@@ -10,6 +10,7 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { LocationSearchComponent } from './location-search/location-search.component';
 import { GeocacheListComponent } from './geocache-list/geocache-list.component';
+import { UserCacheListComponent } from './user-cache-list/user-cache-list.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     LocationSearchComponent,
-    GeocacheListComponent
+    GeocacheListComponent,
+    UserCacheListComponent
   ],
   imports: [
     BrowserModule,
