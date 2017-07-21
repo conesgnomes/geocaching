@@ -2,5 +2,4 @@
 <div>
   <p>Street Address - {{(cacheToDisplay | async)?.formattedAddress}}</p>
   <p>Coordinates - Latitude: {{(cacheToDisplay | async)?.lat}} | Longitude: {{(cacheToDisplay | async)?.long}}</p>
-  <button (click)="deleteCache(cache)">Delete Cache</button>
 </div>

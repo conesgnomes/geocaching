@@ -12,7 +12,6 @@ import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable }
   providers: [ SaveCacheService ]
 })
 export class CacheDetailComponent implements OnInit {
-  // savedCaches: FirebaseListObservable <any[]>;
   cacheId: string;
   cacheToDisplay;
 
@@ -22,16 +21,10 @@ export class CacheDetailComponent implements OnInit {
     private saveCacheService: SaveCacheService) { }
 
   ngOnInit() {
-    // this.savedCaches = this.saveCacheService.getCaches();
     this.route.params.forEach((urlParameters) => {
       this.cacheId = urlParameters['id'];
     });
     this.cacheToDisplay = this.saveCacheService.getCacheById(this.cacheId);
-  }
-
-  deleteCache(selectedCache: Cache) {
-    this.saveCacheService.deleteCache(selectedCache);
-    alert("This cache has been deleted from your list of saved geocaches.");
   }
 
 }

@@ -25,4 +25,9 @@ export class UserCacheListComponent implements OnInit {
     this.router.navigate(['caches', clickedCache.$key]);
   }
 
+  deleteCache(selectedCache: Cache) {
+    this.saveCacheService.deleteCache(selectedCache);
+    alert("This cache has been deleted from your list of saved geocaches.");
+  }
+
 }
