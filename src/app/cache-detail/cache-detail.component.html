@@ -2,4 +2,5 @@
 <div>
   <p>Street Address - {{(cacheToDisplay | async)?.formattedAddress}}</p>
   <p>Coordinates - Latitude: {{(cacheToDisplay | async)?.lat}} | Longitude: {{(cacheToDisplay | async)?.long}}</p>
+  <a routerLink='/user/caches'>Back to Geocache List</a>
 </div>
