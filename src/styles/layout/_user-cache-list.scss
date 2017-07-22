@@ -1,0 +1,12 @@
+.cache-list-container {
+  display: flex;
+  justify-content: center;
+  .user-cache {
+    border: solid grey 1px;
+    padding: 10px;
+    width: 50%;
+    .button-group {
+      margin-top: 20px;
+    }
+  }
+}

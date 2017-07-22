@@ -1,0 +1,17 @@
+{
+  "name": "geocaching",
+  "description": "An app to search for and manage geocache locations",
+  "main": "",
+  "authors": [
+    "Connor Larsen"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

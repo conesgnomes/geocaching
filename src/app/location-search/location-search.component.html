@@ -1,23 +1,32 @@
-<a routerLink="user/caches">View Your Saved Geocaches</a>
-<h2>Add a New Geocache</h2>
-<p>Add using coordinates</p>
-<form>
-  <label>Latitude:</label>
-  <input #lat>
-  <label>Longitude:</label>
-  <input #lng>
-  <button (click)="getCoordinates(lat.value, lng.value)">Submit</button>
-</form>
-<p>Add with a physical address</p>
-<form>
-  <label>Number and Street:</label>
-  <input #address>
-  <label>City:</label>
-  <input #city>
-  <label>State:</label>
-  <input #state>
-  <button (click)="getAddress(address.value, city.value, state.value)">Submit</button>
-</form>
-<div *ngIf="locations">
-  <app-geocache-list [childLocations]="locations"></app-geocache-list>
+<a routerLink="user/caches" class="navigation">View Your Saved Geocaches</a>
+<div class="container">
+  <div class="body-card">
+    <h2>Add a New Geocache</h2>
+    <div class="add-group">
+      <p>Add using coordinates</p>
+      <form>
+        <label>Latitude:</label>
+        <input #lat>
+        <label>Longitude:</label>
+        <input #lng>
+        <button (click)="getCoordinates(lat.value, lng.value)">Submit</button>
+      </form>
+    </div>
+    <p>-- or --</p>
+    <div class="add-group">
+      <p>Add with a physical address</p>
+      <form>
+        <label>Number and Street:</label>
+        <input #address>
+        <label>City:</label>
+        <input #city>
+        <label>State:</label>
+        <input #state>
+        <button (click)="getAddress(address.value, city.value, state.value)">Submit</button>
+      </form>
+    </div>
+    <div *ngIf="locations">
+      <app-geocache-list [childLocations]="locations"></app-geocache-list>
+    </div>
+  </div>
 </div>

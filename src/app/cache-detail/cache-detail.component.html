@@ -1,6 +1,10 @@
-<p>Creator - {{(cacheToDisplay | async)?.creator}}</p>
-<div>
-  <p>Street Address - {{(cacheToDisplay | async)?.formattedAddress}}</p>
-  <p>Coordinates - Latitude: {{(cacheToDisplay | async)?.lat}} | Longitude: {{(cacheToDisplay | async)?.long}}</p>
-  <a routerLink='/user/caches'>Back to Geocache List</a>
+<a routerLink='/user/caches' class="navigation">Back to Geocache List</a>
+<div class="container">
+  <div class="body-card">
+    <p>Creator - {{(cacheToDisplay | async)?.creator}}</p>
+    <div class="address-group">
+      <p>Street Address - {{(cacheToDisplay | async)?.formattedAddress}}</p>
+      <p>Coordinates - Latitude: {{(cacheToDisplay | async)?.lat}} | Longitude: {{(cacheToDisplay | async)?.long}}</p>
+    </div>
+  </div>
 </div>

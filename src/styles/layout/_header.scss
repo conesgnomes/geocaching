@@ -1,0 +1,13 @@
+.header {
+  background-image: url("../assets/hero-bg.jpg");
+  height: 40vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  h1 {
+    margin: 0;
+  }
+}
